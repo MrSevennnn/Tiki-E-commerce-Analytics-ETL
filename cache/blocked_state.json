@@ -1,0 +1,8 @@
+{
+  "blocked_at": "2026-01-26T03:12:30.716994",
+  "error": "429 Too Many Requests - Rate limit exceeded",
+  "recommended_resume_time": "2026-01-27T03:12:30.716994",
+  "status": "READY",
+  "manual_intervention_required": true,
+  "test_mode": true
+}

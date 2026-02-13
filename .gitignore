@@ -1,0 +1,182 @@
+# ============================================================================
+# .gitignore for Tiki E-commerce Analytics Platform
+# ============================================================================
+
+# ============================================================================
+# SENSITIVE FILES - NEVER COMMIT
+# ============================================================================
+# Google Cloud credentials
+**/google_cloud_credentials.json
+**/*credentials*.json
+**/*.pem
+**/*.key
+.env
+.env.*
+
+# SSH keys
+**/*.ppk
+**/*.pub
+id_rsa*
+
+# ============================================================================
+# NODE.JS
+# ============================================================================
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+package-lock.json
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output/
+
+# ============================================================================
+# CRAWLER DATA - Temporary local files
+# ============================================================================
+# Crawled data (will be uploaded to GCS)
+TikiCrawler/puppeteer/data/
+**/data/raw/
+**/data/processed/
+**/data/*.json
+**/data/*.csv
+
+# Test files
+**/test_payload_*.json
+
+# ============================================================================
+# AIRFLOW
+# ============================================================================
+# Airflow logs and metadata
+**/airflow/logs/
+**/airflow/*.db
+**/airflow/*.pid
+**/airflow/*.err
+**/airflow/*.out
+airflow.cfg
+webserver_config.py
+
+# ============================================================================
+# PYTHON (for Airflow DAGs)
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# ============================================================================
+# GOOGLE TRENDS - Phase 2
+# ============================================================================
+# Cache files
+cache/
+**/cache/google_trends/
+**/cache/trends_test/
+**/cache/blocked_state.json
+
+# Temporary trends data
+**/google_trends_*.csv
+**/trends_*.csv
+/tmp/google_trends/
+
+# Test files
+test_trends_*.py
+test_fallback_*.py
+test_google_trends.py
+
+# ============================================================================
+# IDE & EDITORS
+# ============================================================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ============================================================================
+# OS GENERATED FILES
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# ============================================================================
+# LOGS & TEMP FILES
+# ============================================================================
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Temporary output files
+/tmp/
+*.parquet.tmp
+*.json.tmp
+
+# ============================================================================
+# BUILD & DISTRIBUTION
+# ============================================================================
+dist/
+build/
+*.tar.gz
+*.zip
+
+# ============================================================================
+# DEBUGGING
+# ============================================================================
+# Puppeteer debug files
+TikiCrawler/puppeteer/debug_*.html
+TikiCrawler/puppeteer/debug_*.json
+TikiCrawler/puppeteer/next_data.json
+
+# Screenshots
+screenshots/
+*.png
+*.jpg
+*.jpeg
+
+# ============================================================================
+# KEEP THESE (Force include with !)
+# ============================================================================
+# Keep folder structure examples
+!.gitkeep
+!README.md

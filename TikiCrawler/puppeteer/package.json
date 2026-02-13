@@ -1,0 +1,39 @@
+{
+  "name": "tiki-crawler",
+  "version": "1.0.0",
+  "description": "Vietnam E-commerce Analytics Platform - Tiki Product Crawler",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index_api.js",
+    "crawl": "node src/index_api.js",
+    "crawl:api": "node src/index_api.js",
+    "crawl:puppeteer": "node src/index_puppeteer.js",
+    "crawl:old": "node src/index.js",
+    "crawl:debug": "DEBUG=true node src/index.js",
+    "test": "node src/test.js",
+    "test:gcs": "node src/test_gcs_connection.js",
+    "test:puppeteer": "node src/test_puppeteer.js"
+  },
+  "keywords": [
+    "tiki",
+    "crawler",
+    "puppeteer",
+    "ecommerce",
+    "vietnam",
+    "gcs",
+    "google-cloud-storage"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/storage": "^7.18.0",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.0.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

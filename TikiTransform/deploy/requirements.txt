@@ -1,0 +1,19 @@
+
+apache-airflow-providers-google
+
+pandas
+numpy
+pyarrow
+
+google-cloud-storage
+google-cloud-bigquery
+gcsfs
+fsspec
+
+python-dateutil
+
+# Phase 2: Google Trends Integration
+pytrends
+
+pytest
+pytest-cov
